@@ -1,0 +1,64 @@
+#block_chatscreen{
+    transition:transform 0.5s;
+}
+#block_chatscreen.chatting{
+    transform: translate(0,-50px);
+}
+#block_input input{
+    transition:font-size 0.5s, height 0.5s,background-color 0.5s;
+    background-color:rgba(0, 0, 0, 0.3);
+    bottom:0;
+    width:calc(100% - 200px);
+    position:absolute;
+}
+#block_input:not(.selected) input{
+    height:0px !important;
+    width:calc(100% - 200px);
+    font-size:10px;
+    background-color:transparent;
+}
+.message.sent,
+.message .content {
+    animation: pop-in-right 0.5s;
+}
+
+.message:not(.sent),
+.message:not(.sent) .content {
+    animation: pop-in-left 0.5s;
+}
+
+@keyframes pop-in-right {
+    0% {
+        opacity:0;
+        transform: translate(100vw, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity:1;
+    }
+}
+
+@keyframes pop-in-left {
+    0% {
+        opacity:0;
+        transform: translate(-100vw, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity:1;
+    }
+}
+
+#block_input::before {
+    transition:width 1s;
+    z-index:1;
+}
+
+#block_input.selected::before {
+    width: calc(100% - 200px);
+}
+#block_input:not(.selected)::before {
+    width: 0px;
+}

@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Hacker';
+    src: url('../font/hacker.ttf');
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Hacker, monospace;
+    background-color:transparent;
+    color: lime;
+}
+
+#body {
+    background-color:black;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+#block_navigation {
+    grid-column: 1/3;
+    display: none;
+}
+
+#block_chatscreen {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    overflow: hidden;
+}
+
+#block_chatscreen .message:not(.sent) {
+    margin: 5px;
+    display: block;
+    max-width: 80%;
+    width: fit-content;
+    border-left: solid 1px limegreen;
+}
+
+#block_chatscreen .message.sent {
+    margin: 5px;
+    display: block;
+    max-width: 80%;
+    width: fit-content;
+    margin-left: auto;
+    border-right: solid 1px limegreen;
+    text-align: right;
+}
+
+#block_chatscreen .message.sent .name {
+    margin-left: auto;
+}
+
+#block_chatscreen .message .name {
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+    border-bottom: solid 1px;
+}
+
+#block_chatscreen .message .content {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#block_chatscreen .message .code {
+    text-align: center;
+}
+
+#block_chatscreen .message .frame {
+    width: 400px;
+    height: 250px;
+}
+
+#block_chatscreen .notice {
+    width: 100%;
+    text-align: center;
+}
+
+#block_chatscreen .notice .content {
+    display: block;
+    padding: 5px;
+}
+
+#block_clientlist {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    font-weight: bold;
+    border-left: solid 1px;
+    z-index: 1;
+}
+#block_clientlist .user{
+    display:block;
+    padding:3px;
+    widht:100%;
+}
+#block_clientlist .user:nth-child(odd) {
+    color: limegreen;
+}
+#block_clientlist .user:nth-child(even){
+    /* color: limegreen; */
+}
+
+#block_clientlist div {
+    border-bottom: 1px solid limegreen;
+    margin: 10px;
+}
+
+#block_input {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+#block_input::before{
+    content:"";
+    display:block;
+    background-color:green;
+    height: 2px;
+    position: absolute;
+    width:calc(100% - 200px);
+}
+
+#block_input input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border:0;
+    border-bottom: solid limegreen 2px;
+    outline: none;
+    padding: 5px;
+}
+
+#block_input input::selection {
+    background-color: limegreen;
+    outline: none;
+}
+#block_chatscreen table.help .cmd{
+    padding:5px;
+    text-align: right;
+}
+#block_chatscreen table.help .info{
+    padding:5px;
+    border-left:2px solid limegreen;
+    text-align: left;
+}
+#block_chatscreen table.help th{
+    font-size:25px;;
+}

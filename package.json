@@ -1,0 +1,23 @@
+{
+  "name": "bledder",
+  "version": "1.0.0",
+  "description": "chat app",
+  "main": "index.js",
+  "dependencies": {
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonvdongen/bledder-net.git"
+  },
+  "author": "Brandon v Dongen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonvdongen/bledder-net/issues"
+  },
+  "homepage": "https://github.com/brandonvdongen/bledder-net#readme"
+}

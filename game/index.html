@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <script src="http://bledder.net/game/node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let controls = {KeyW:0,KeyA:0,KeyS:0,KeyD:0};
+            const socket = io('http://localhost');
+            socket.on('update', function (data) {
+                document.write("hallo:",data.msg,"<br>");
+            });
+            document.addEventListener("keydown",function(e){
+                if(e.code in controls){
+                    controls[e.code] = 1;
+                }
+                console.log(controls);
+            });
+            document.addEventListener("keyup",function(e){
+                if(e.code in controls){
+                    controls[e.code] = 0;
+                }
+                console.log(controls);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="output"></div>
+<input id="bericht">
+</body>
+</html>

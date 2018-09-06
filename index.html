@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bledder NET Chat</title>
+    <link rel="stylesheet" href="css/preloader.css">
+    <link class="theme" rel="stylesheet" href="assets/theme/default/css/style.css">
+    <link class="theme" rel="stylesheet" href="assets/theme/default/css/animations.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <script src="http://bledder.brandonvdongen.nl/node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="js/bgm.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/post.js"></script>
+    <script src="js/CCSwap.js"></script>
+
+</head>
+
+<body>
+<div id="preloader">
+    <div class='h'>
+        <img src="assets/img/preloader.svg">
+    </div>
+    <p>Connecting to Bledder.net Servers</p>
+</div>
+<div id="body" class="focus">
+    <nav id="block_navigation"><span id="room_id">Current room: Connecting...</span><span id="usercount">Users in room ?</span></nav>
+    <div id="block_chatscreen"></div>
+    <div id="block_clientlist"></div>
+    <div id="block_input">
+        <form>
+            <input type="text" class="post" placeholder="[Press enter/Click here to chat]" onfocus="this.placeholder = ''" onblur="this.placeholder = '[Press enter/Click here to chat]'">
+        </form>
+    </div>
+</div>
+</body>
+
+</html>

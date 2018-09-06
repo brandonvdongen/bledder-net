@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="preloader" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+	 viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{filter:url(#Adobe_OpacityMaskFilter);}
+	.st2{mask:url(#inner_1_);fill:none;stroke:#B5DCE4;stroke-width:5;stroke-miterlimit:10;}
+	.st3{filter:url(#Adobe_OpacityMaskFilter_1_);}
+	.st4{mask:url(#outer_1_);fill:none;stroke:#CC2327;stroke-width:5;stroke-miterlimit:10;}
+	#inner{
+        transform-origin:center;
+        animation: goa 2s 0.5s linear infinite;
+    }
+    #outer{
+        transform-origin:center;
+        animation: gom 2s linear infinite;
+    }
+	@keyframes goa {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-180deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    75% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+	}
+	@keyframes gom {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+</style>
+<g id="dot">
+	<circle class="st0" cx="18" cy="18" r="3.9"/>
+</g>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="7.3" y="7.3" width="21.5" height="21.5">
+		
+			<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="7.3" y="7.3" width="21.5" height="21.5" id="inner_1_">
+	<g class="st1">
+		<rect x="4.8" y="4.8" width="26.3" height="13.2"/>
+	</g>
+</mask>
+<circle id="inner" class="st2" cx="18" cy="18" r="8.2"/>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="0.5" y="0.5" width="35" height="35">
+		
+			<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="0.5" y="0.5" width="35" height="35" id="outer_1_">
+	<g class="st3">
+		<rect x="0" y="0" width="36" height="18"/>
+	</g>
+</mask>
+<circle id="outer" class="st4" cx="18" cy="18" r="15"/>
+</svg>

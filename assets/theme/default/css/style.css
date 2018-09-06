@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+}
+
+
+#body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+#block_navigation {
+    background: slategray;
+    grid-column: 1/3;
+    color:white;
+    font-size:30px;
+    padding:10px;
+}
+#block_navigation span{
+    padding:10px;
+    border-right:2px solid rgba(0,0,0,0.1);
+}
+#block_chatscreen {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: lightsteelblue;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#block_chatscreen .message {
+    margin:5px;
+    display: block;
+    max-width:80%;
+    margin:5px;
+    width: fit-content;
+}
+#block_chatscreen .message.sent {
+
+    margin-left:auto;
+}
+#block_chatscreen .message.sent .name {
+    background-color:steelblue;
+    margin-left:auto;
+}
+
+#block_chatscreen .message .name{
+    font-weight:bold;
+    display: block;
+    padding: 5px;
+    background-color: grey;
+}
+#block_chatscreen .message .content{
+    display:block;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+#block_chatscreen .message .code{
+    text-align:center;
+}
+#block_chatscreen .message .frame{
+    width: 400px;
+    height: 250px;
+}
+#block_chatscreen .notice {
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    text-align: center;
+}
+#block_chatscreen .notice .content{
+    display:block;
+    padding:5px;
+    color: lightgray;
+}
+#block_clientlist {
+    background-color: dimgray;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-weight: bold;
+    color: white;
+}
+#block_clientlist .user{
+    display:block;
+    padding:3px;
+    widht:100%;
+}
+#block_clientlist .user:nth-child(odd){
+    background-color: grey;
+}
+#block_clientlist .user:nth-child(even){
+    background-color: darkgrey;
+}
+
+#block_clientlist div {
+    border-bottom: 1px solid grey;
+    margin: 10px;
+}
+
+#block_input {
+    background-color: black;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+#block_input input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    font-size:20px;
+}
+
+#block_chatscreen .help td{
+    border:1px solid silver;
+    background-color: rgba(0,0,0,0.2);
+    padding:3px;
+}
+#block_chatscreen table.help{
+    max-width: 95%;
+    margin:auto;
+}
+#block_chatscreen table.help .cmd{
+    text-align: right;
+}
+#block_chatscreen table.help .info{
+    text-align: left;
+}
